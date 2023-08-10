@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.SpringBootWithAngular.interfaces.UserRepository;
-import com.example.SpringBootWithAngular.entities.User;
+import com.example.SpringBootWithAngular.entities.Users;
 
 @RestController
 @CrossOrigin(origins = {"${address.front}"}) //Ubicación del front
@@ -17,12 +17,12 @@ public class UserController {
     private  UserRepository userRepository;
 
     @GetMapping("/users")
-    public List<User> getUsers() {
-        return (List<User>) userRepository.findAll();
+    public List<Users> getUsers() {
+        return (List<Users>) userRepository.findAll();
     }
 
     @PostMapping("/users")
-    void addUser(@RequestBody User user) {
+    void addUser(@RequestBody Users user) {
         userRepository.save(user);
     }
 }

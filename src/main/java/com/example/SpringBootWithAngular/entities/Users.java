@@ -2,8 +2,11 @@ package com.example.SpringBootWithAngular.entities;
 
 import jakarta.persistence.*;
 
+// La palabra "User" está reservada en el estandar SQL y es una clave en H2
+// Utilizar esta palabra clave resulta en error de H2 y SQL al arrancar la aplicación
+// Por esta se razón se ha optado por la variante en plurar "Users"
 @Entity
-public class User {
+public class Users {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,12 +15,12 @@ public class User {
     private String email;
     
     // standard constructors / setters / getters / toString
-    public User() {
+    public Users() {
         this.name = "";
         this.email = "";
     }
     
-    public User(String name, String email) {
+    public Users(String name, String email) {
         this.name = name;
         this.email = email;
     }
@@ -36,6 +39,6 @@ public class User {
     
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
+        return "Users{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
     }
 }
