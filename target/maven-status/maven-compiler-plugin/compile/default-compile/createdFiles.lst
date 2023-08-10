@@ -1,4 +1,4 @@
 com/example/SpringBootWithAngular/SpringBootWithAngularApplication.class
+com/example/SpringBootWithAngular/entities/Users.class
 com/example/SpringBootWithAngular/controllers/UserController.class
 com/example/SpringBootWithAngular/interfaces/UserRepository.class
-com/example/SpringBootWithAngular/entities/User.class
