@@ -9,7 +9,8 @@ import com.example.SpringBootWithAngular.interfaces.UserRepository;
 import com.example.SpringBootWithAngular.entities.Users;
 
 @RestController
-@CrossOrigin(origins = {"${address.front}"}) //Ubicación del front
+//@CrossOrigin(origins = {"${address.front}"}) //Ubicación del front
+@CrossOrigin(origins = {"http://localhost:4200"}) //Ubicación del front
 public class UserController {
 
     // standard constructors
